@@ -9,17 +9,18 @@ class Controller
   {
     $this->view = new View();
 
-    }
+
   }
-  function loadModel($name){
+  function loadModel($name) {
 
-    $path = 'models/'.$name.'_model.php';
+		$path = 'models/'.$name.'_model.php';
 
-    if (file_exists($path)) {
-      require 'models/'.$name.'_model.php';
-      $modelName = $name . '_Model.php';
-      $this->model = new $modelName;
+		if (file_exists($path)) {
+			require 'models/'.$name.'_model.php';
+
+			$modelName = $name . '_Model';
+			$this->model = new $modelName();
   }
 }
-
+}
  ?>
