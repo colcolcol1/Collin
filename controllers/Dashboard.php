@@ -10,10 +10,11 @@
        exit;
      }
 
-     $this->view->js = array('dashboard/js/default.js');
+     $this->view->js = array('Dashboard/js/default.js');
 
    }
      function index(){
+
 
        $this->view->render('Dashboard/index');
      }
@@ -24,7 +25,7 @@
      }
 
      function xhrInsert(){
-
+       $this->model->xhrInsert();
      }
 
  }
