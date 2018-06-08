@@ -48,10 +48,10 @@ class Bootstrap {
 
 
 	}
-	
+
 	function error() {
 		require 'controllers/error.php';
-		$controller = new Error();
+		$controller = new Foutmelding();
 		$controller->index();
 		return false;
 	}

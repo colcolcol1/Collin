@@ -6,6 +6,7 @@ class Login_Model extends Model
 	{
 		parent::__construct();
 	}
+
 	public function run()
 	{
 		$sth = $this->db->prepare("SELECT id FROM users WHERE
@@ -14,18 +15,19 @@ class Login_Model extends Model
 			':login' => $_POST['login'],
 			':password' => $_POST['password']
 		));
+
 		//$data = $sth->fetchAll();
 
-		$count = $sth->rowCount();
+		$count =  $sth->rowCount();
 		if ($count > 0) {
-			// Login...
+			// login
 			Session::init();
 			Session::set('loggedIn', true);
 			header('location: ../dashboard');
 		} else {
-			// Error...
 			header('location: ../login');
 		}
-  }
+
+	}
 
 }

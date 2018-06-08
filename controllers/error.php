@@ -1,5 +1,5 @@
 <?php
-class foutmelding extends Controller{
+class Foutmelding extends Controller{
 
   function __construct(){
     parent::__construct();
