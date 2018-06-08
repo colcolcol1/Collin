@@ -27,6 +27,9 @@
      function xhrInsert(){
        $this->model->xhrInsert();
      }
+     function xhrGetListings(){
+       $this->model->xhrGetListings();
+     }
 
  }
 
