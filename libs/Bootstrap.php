@@ -23,6 +23,9 @@ class Bootstrap {
 		} else {
 			$this->error();
 		}
+		echo "DIT IS DE URL0! ";
+		echo $url[0];
+		echo "<br/>";
 
 		$controller = new $url[0];
 		$controller->loadModel($url[0]);
